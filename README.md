@@ -1,13 +1,45 @@
 #Webpack-1
 
-##3-Organize
-*Let's clean-up organize our project into directories*
+##4-Basic-Entry-Output
+Let's dive a bit further into configuring out entry(s) and output(s)
 
-src/
-- app/
-  - module1
-- stylesheets/
-  - styles.css
-- index.js
+*- Our bare-bones entry and output*
+```
+odule.exports = {
+  entry: './src/index.js'
+  output: {
+    filename: './dist/bundle.js'
+  }
+};
+```
 
-*Finally, let's make it work!*
+*- Let's put in some safeguards for our entry point*
+```
+module.exports = {
+  context: `${__dirname}/src`, // Where webpack will resolve entry path
+  entry: './index.js'
+}
+```
+
+*- Let's consolidate our public files into the dist/ directory*
+```
+...
+output: {
+  path: 'dist',
+  filename: 'bundle.js'
+}
+
+```
+
+*- A more customized entry/output*
+```
+module.exports = {
+  context: `${__dirname}/src`,
+  entry: './index.js',
+  output: {
+    path: 'dist',
+    filename: 'bundle.js'
+  }
+}
+```
+NOTE: Your output will be ./dist/app.js for which you will have to update your `index.html`
