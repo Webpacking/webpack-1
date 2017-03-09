@@ -1,10 +1,13 @@
 #Webpack-1
 
-##Project Structure
-src-
-    | stylesheets
-    | app -
-            | module1.js
-    | index.js
+##3-Organize
+*Let's clean-up organize our project into directories*
 
-*Make it work!*
+src/
+- app/
+  - module1
+- stylesheets/
+  - styles.css
+- index.js
+
+*Finally, let's make it work!*
