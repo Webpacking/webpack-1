@@ -1,6 +1,6 @@
 #Webpack-1
 
-##4-Dynamic-Entry-Output
+##5-Dynamic-Entry-Output
 Let's dive a bit further into configuring out entry(s) and output(s)
 
 *- This is a more dynamic version of entry point which allow*
