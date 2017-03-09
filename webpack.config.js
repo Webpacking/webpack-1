@@ -1,15 +1,13 @@
 module.exports = {
-  context: `${__dirname}/src`,
-  entry: {
-    app: './index.js'
-  },
+  entry: './src/index.js',
   output: {
     path: 'dist',
-    filename: '[name].js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel' }
+      { test: /\.js$/, loader: 'babel' },
+      { test: /\.json$/, loader: 'json' }
     ]
   }
 };

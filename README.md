@@ -1,48 +1,42 @@
 #Webpack-1
 
-##4-Dynamic-Entry-Output
-Let's dive a bit further into configuring out entry(s) and output(s)
+##6-Dev-Server
+We want to tell the dev where our html lives
 
-*- This is a more dynamic version of entry point which allow*
+###Setup
+- `npm i -D webpack-dev-server@1.16.3`
+
+*- This will allow us quickly make use of Hot Module Replacement*
+- First method is create an npm script:
+`webpack-dev-server --hot --inline --content-base dist/`
+
 ```
 module.exports = {
-  entry: {
-    app: './src/index.js',
-  },
+  entry: './src/index.js',
   output: {
     path: 'dist',
-    filename: '[name].js'
+    filename: 'bundle.js'
   }
 };
 ```
-Output filename will be `./dist/app.js`
 
-*- Our application may require multiple entry points*
+*- Another method is add the `devServer` object to our config*
+
 ```
 module.exports = {
-  entry: {
-    app: './src/index.js',
-    module1: './src/app/module1.js',
-  },
+  entry: './src/index.js',
   output: {
     path: 'dist',
-    filename: '[name].js'
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: 'dist',
+    inline: true // Then we set the content base to our public folder
   }
 };
 ```
-Will output 2 files in ./dist, app.js and module1.js
 
-*- TEN points to the person who can figure out what this does*
-```
-module.exports = {
-  entry: {
-    app: './src/index.js',
-    vendor: ['react', 'lodash', ...]
-  },
-  output: {
-    path: 'dist',
-    filename: '[name].js'
-  }
-};
-```
-Will output 2 files in ./dist, app.js and vendor.js
+NOTE: There is also Node middleware for the dev server which we'll get to if
+we have time
+
+*For now, let's create some VanillaJS components and really make use of HMR*
