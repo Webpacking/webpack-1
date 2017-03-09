@@ -1,7 +1,11 @@
 module.exports = {
-  entry: './index.js',
+  context: `${__dirname}/src`,
+  entry: {
+    app: './index.js'
+  },
   output: {
-    filename: 'dist/bundle.js'
+    path: 'dist',
+    filename: '[name].js'
   },
   module: {
     loaders: [

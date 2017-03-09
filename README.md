@@ -1,45 +1,48 @@
 #Webpack-1
 
-##4-Basic-Entry-Output
+##4-Dynamic-Entry-Output
 Let's dive a bit further into configuring out entry(s) and output(s)
 
-*- Our bare-bones entry and output*
+*- This is a more dynamic version of entry point which allow*
 ```
-odule.exports = {
-  entry: './src/index.js'
+module.exports = {
+  entry: {
+    app: './src/index.js',
+  },
   output: {
-    filename: './dist/bundle.js'
+    path: 'dist',
+    filename: '[name].js'
   }
 };
 ```
+Output filename will be `./dist/app.js`
 
-*- Let's put in some safeguards for our entry point*
+*- Our application may require multiple entry points*
 ```
 module.exports = {
-  context: `${__dirname}/src`, // Where webpack will resolve entry path
-  entry: './index.js'
-}
-```
-
-*- Let's consolidate our public files into the dist/ directory*
-```
-...
-output: {
-  path: 'dist',
-  filename: 'bundle.js'
-}
-
-```
-
-*- A more customized entry/output*
-```
-module.exports = {
-  context: `${__dirname}/src`,
-  entry: './index.js',
+  entry: {
+    app: './src/index.js',
+    module1: './src/app/module1.js',
+  },
   output: {
     path: 'dist',
-    filename: 'bundle.js'
+    filename: '[name].js'
   }
-}
+};
 ```
-NOTE: Your output will be ./dist/app.js for which you will have to update your `index.html`
+Will output 2 files in ./dist, app.js and module1.js
+
+*- TEN points to the person who can figure out what this does*
+```
+module.exports = {
+  entry: {
+    app: './src/index.js',
+    vendor: ['react', 'lodash', ...]
+  },
+  output: {
+    path: 'dist',
+    filename: '[name].js'
+  }
+};
+```
+Will output 2 files in ./dist, app.js and vendor.js
