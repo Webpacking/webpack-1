@@ -1,42 +1,30 @@
 #Webpack-1
 
-##6-Dev-Server
-We want to tell the dev where our html lives
+##7-Webpack-2
+Let's migrate to Webpack 2
 
-###Setup
-- `npm i -D webpack-dev-server@1.16.3`
+###First
+1. `npm i -D webpack@2.2.1`
+2. `npm run webpack`
 
-*- This will allow us quickly make use of Hot Module Replacement*
-- First method is create an npm script:
-`webpack-dev-server --hot --inline --content-base dist/`
+*Right about now we have some interesting stuff happening with our loaders. Let's fix it!*
 
-```
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: 'dist',
-    filename: 'bundle.js'
-  }
-};
-```
+###Second
+1. `npm run build:serve`
+2. Run our app from localhost, make some changes and check to see that HMR is working
 
-*- Another method is add the `devServer` object to our config*
+*It's not working anymore so let's fix it*
+3. `npm i webpack-dev-server@2.4.1`
 
-```
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: 'dist',
-    filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: 'dist',
-    inline: true // Then we set the content base to our public folder
-  }
-};
-```
+*We're back!!!*
 
-NOTE: There is also Node middleware for the dev server which we'll get to if
-we have time
+*So we're noticing that the Webpack team has made migration easy enough and they've even given us some default features. But there are still a few things we need to change to REALLY [migrate to Webpack2](https://webpack.js.org/guides/migrating/#module-loaders-is-now-module-rules).*
 
-*For now, let's create some VanillaJS components and really make use of HMR*
+###Finally
+*Let's style it up a bit before moving on*
+- `npm i -D style-loader`
+- `npm i -D css-loader`
+
+*Add the loader to our config (2 options)*
+- `{ test: /\.css$/, use: ['style-loader', 'css-loader'] }`
+- `{ test: /\.css$/, loader: 'style-loader!css-loader' }`
