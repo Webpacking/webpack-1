@@ -5,6 +5,18 @@
 - `require => import`
 - `exports => export`
 
+ex:
+
+*Project files:*
+`export const test = 'Testing 1..2..3';`
+`import { test } from './module1.js';` // Via this exports object
+
+`export default test;`
+`import whateverIWantToCallIt from './module1.js';`
+
+*Node Modules:*
+`import React from 'react';` // Resolves node_modules
+
 ##Setup
 *Install Babel dependencies:*
 - `npm i -D babel-core`
@@ -37,3 +49,6 @@ module.exports = {
   }
 };
 ```
+
+IMPORTANT NOTE: This is they HIGHLY recommended babel-loader but it's not actually "bare-bones"
+`{ test: /\.js$/, loader: 'babel', exclude: /node_modules/ }`
