@@ -5,17 +5,16 @@
 - `require => import`
 - `exports => export`
 
-ex:
 
 *Project files:*
-`export const test = 'Testing 1..2..3';`
-`import { test } from './module1.js';` // Via this exports object
+- `export const TEST = 'Testing 1..2..3';` =>
+- `import { TEST } from './module1.js';` // Via this exports object
 
-`export default test;`
-`import whateverIWantToCallIt from './module1.js';`
+- `export default TEST;`
+- `import whateverIWantToCallIt from './module1.js';`
 
 *Node Modules:*
-`import React from 'react';` // Resolves node_modules
+- `import React from 'react';` // Resolves node_modules, no relative path necessary
 
 ##Setup
 *Install Babel dependencies:*
