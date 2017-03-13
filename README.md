@@ -10,10 +10,7 @@ Essentially, these are precursors of the ES6, `import` and `export` now made ava
 ##Setup
 - `npm i -D webpack@1.14.0`
 
-
-
-
-*Let's add some code to our `index.js` and `module1.js` files:*
+###*Now, let's add some code to our `index.js` and `module1.js` files:*
 ```
 // module1.js
 const TEST = 'Testing 1..2..3';
@@ -56,8 +53,12 @@ module.exports = {
 
 ```
 
-*Finally, update the `<script>` element with relative path to our output file*
+*Finally, update the `src` for our JS in `index.html` with relative path to our output file:*
+- `<script sr>`
 
 ##Execute
 1. From our terminal, `npm run webpack` // NOTE: custom NPM scripts requrie the `run`
 2. Open the `index.html` in the browser and open the developer console to see our logged output
+
+
+###
