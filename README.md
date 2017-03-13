@@ -52,3 +52,5 @@ module.exports = {
 
 IMPORTANT NOTE: This is they HIGHLY recommended babel-loader but it's not actually "bare-bones"
 `{ test: /\.js$/, loader: 'babel', exclude: /node_modules/ }`
+
+####*When finished, rebuild and chaeckout to 3-organize*
