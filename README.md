@@ -3,7 +3,7 @@
 ##1-commonjs
 *CommonJS is essentialy making use of the Node module system to share dependencies:*
 - `module.exports` or `exports.dependency` // Give the application access
-- `const greeting = require('./greetingFile.js');` // access the export dependency
+- `const dependency = require('./dependency.js');` // access the export dependency
 
 Essentially, these are precursors of the ES6, `import` and `export` now made available, client-side, via Webpack
 
