@@ -6,9 +6,9 @@
 - `exports => export`
 
 
-*Project files:*
-- `export const TEST = 'Testing 1..2..3';` =>
-- `import { TEST } from './module1.js';` // Via this exports object
+*Updates:*
+- `exports.TEST` => `export const TEST = 'Testing 1..2..3';`
+- `const { TEST } = require('./module1.js');` => ` import { TEST } from './module1.js';`
 
 - `export default TEST;`
 - `import whateverIWantToCallIt from './module1.js';`
