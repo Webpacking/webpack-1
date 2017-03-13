@@ -1,6 +1,6 @@
 #Webpack-1
 
-**First, let's upgrade our reqiure and exports to ES6 syntax**
+**First, let's upgrade our require and exports to ES6 syntax**
 
 - `require => import`
 - `exports => export`
