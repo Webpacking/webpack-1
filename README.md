@@ -29,7 +29,7 @@ console.log(TEST);
 ```
 
 
-*In our package.json, let's create a new NPM script:*
+###*In our package.json, let's create a new NPM script:*
 (no comments in the actual `package.json`)
 ```
 ...
@@ -40,7 +40,7 @@ console.log(TEST);
 ...
 ```
 
-*Let's add the 'entry' point and `output.filename' to our config:*
+###*Let's add the 'entry' point and `output.filename' to our config:*
 
 // webpack.config.js
 ```
@@ -53,12 +53,13 @@ module.exports = {
 
 ```
 
-*Finally, update the `src` for our JS in `index.html` with relative path to our output file:*
-- `<script sr>`
+###*Finally, update the `src` for our JS in `index.html` with relative path to our `bundle.js`:*
+- `<script src="bundle.js">`
+
 
 ##Execute
 1. From our terminal, `npm run webpack` // NOTE: custom NPM scripts requrie the `run`
 2. Open the `index.html` in the browser and open the developer console to see our logged output
 
 
-###
+####*When complete, rebuild everything from scratch and check out to `2-commonjs-es6`*
