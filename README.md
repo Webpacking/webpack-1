@@ -23,7 +23,7 @@
 - `npm i -D babel-preset-es2015`
 - `npm i -D babel-preset-latest`
 
-*Add babelrc file:*
+###*Add babelrc file:*
 - `(root-dir) $ touch .babelrc`
 
 Inside .babelrc add the following:
@@ -34,7 +34,7 @@ Inside .babelrc add the following:
 }
 ```
 
-*Add the Babel loader to the Webpack config:*
+###*Add the Babel loader to the Webpack config:*
 ```
 module.exports = {
   entry: './index.js',
