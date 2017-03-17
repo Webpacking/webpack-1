@@ -1,15 +1,15 @@
-#Webpack-1
+# Webpack-1
 
-##4-Basic-Entry-Output
+## 4-Basic-Entry-Output
 Let's dive a bit further into configuring out entry(s) and output(s)
 
-##Setup
+## Setup
 *You may notice `npm-shrinkwrap.json` this will allow to run npm install and lock the module versions*
 1. `npm i`
 2. `npm run webpack`
 3. Create or copy index.html to the `dist` folder after running webpack
 
-###*- Our bare-bones entry and output:*
+### *- Our bare-bones entry and output:*
 ```
 odule.exports = {
   entry: './src/index.js'
@@ -19,7 +19,7 @@ odule.exports = {
 };
 ```
 
-###*- Let's put in some safeguards for our entry an output paths:*
+### *- Let's put in some safeguards for our entry an output paths:*
 ```
 const { resolve } = require('path'); // No need to NPM install this module
 
@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-###*Finally, after your dist folder is created, move your index.html to that folder and update the file path:*
+### *Finally, after your dist folder is created, move your index.html to that folder and update the file path:*
 
 NOTES:
 - Your output will be ./dist/app.js for which you will have to update your `index.html`
