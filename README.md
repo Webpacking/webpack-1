@@ -1,12 +1,12 @@
-#Webpack-1
+# Webpack-1
 
-##6-Dev-Server
-We want to tell the dev where our html lives
+## 6-Dev-Server
+We want to tell the dev-server where our html lives so it can serve it. Note that moving forward we will be using recommended Webpack configurations
 
-###Setup
+## Setup
 - `npm i -D webpack-dev-server@1.16.3`
 
-*- This will allow us quickly make use of Hot Module Replacement*
+### *- This will allow us quickly make use of Hot Module Replacement*
 - First method is create an npm script:
 `webpack-dev-server --hot --inline --content-base dist/`
 
@@ -20,7 +20,7 @@ module.exports = {
 };
 ```
 
-*- Another method is add the `devServer` object to our config*
+### *- Another method is add the `devServer` object to our config*
 
 ```
 module.exports = {
@@ -39,4 +39,4 @@ module.exports = {
 NOTE: There is also Node middleware for the dev server which we'll get to if
 we have time
 
-*For now, let's create some VanillaJS components and really make use of HMR*
+### *For now, let's create some VanillaJS components and really make use of HMR*
