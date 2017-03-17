@@ -1,9 +1,14 @@
-#Webpack-1
+# Webpack-1
 
-##5-Dynamic-Entry-Output
+## 5-Dynamic-Entry-Output
 Let's dive a bit further into configuring out entry(s) and output(s)
 
-*- This is a more dynamic version of entry point which allow*
+## Setup
+1. `npm i`
+2. `npm run webpack`
+3. Create `index.html` in the dist directory
+
+### *- This is a more dynamic version of entry point which allow*
 ```
 module.exports = {
   entry: {
@@ -17,7 +22,7 @@ module.exports = {
 ```
 Output filename will be `./dist/app.js`
 
-*- Our application may require multiple entry points*
+### *- Our application may require multiple entry points at times*
 ```
 module.exports = {
   entry: {
@@ -32,7 +37,7 @@ module.exports = {
 ```
 Will output 2 files in ./dist, app.js and module1.js
 
-*- TEN points to the person who can figure out what this does*
+### *- TEN points to the person who can figure out what this does*
 ```
 module.exports = {
   entry: {

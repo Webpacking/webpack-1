@@ -1,3 +1,9 @@
-import { TEST } from './app/module1.js';
+import { TEST, hash, chunks } from './app/module1.js';
 
-console.warn(TEST);
+const output =
+`
+  ${TEST}
+  ${chunks}
+  ${hash}
+`
+document.write(output);
