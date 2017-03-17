@@ -4,7 +4,7 @@
 Let's dive a bit further into configuring out entry(s) and output(s)
 
 ## Setup
-*You may notice `npm-shrinkwrap.json` this will allow to run npm install and lock the module versions*
+*You may notice `npm-shrinkwrap.json` this will allow to run `npm install` and lock the module versions*
 1. `npm i`
 2. `npm run webpack`
 3. Create or copy index.html to the `dist` folder after running webpack
