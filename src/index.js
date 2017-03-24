@@ -8,5 +8,9 @@ const app = document.getElementById('app');
 
 data.colorsArray.forEach((color, i) => {
   const { colorName } = color;
+  
   app.append(createH1(colorName, `${colorName}i`, 'intros'));  
 });
+
+// Try commenting out the line below to test HMR
+app.append(createH1('Have some Fun!!!', `test-again`, 'intros-2'));

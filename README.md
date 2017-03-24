@@ -7,10 +7,21 @@ We want to tell the dev-server where our html lives so it can serve it. Note tha
 - `npm i -D webpack-dev-server@1.16.3`
 
 ### *- This will allow us quickly make use of Hot Module Replacement*
-- First method is create an npm script:
-`webpack-dev-server --hot --inline --content-base dist/`
+1. Create an npm script in package.json, 
 
+```javascript
+"scripts": {
+  ...
+  "build:dev": "webpack && webpack-dev-server --hot --inline --content-base dist/"
+  ...
+}
 ```
+
+2. `npm run dev:build`
+
+3. open browser to `localhost:8080`
+
+```javascript
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -22,7 +33,7 @@ module.exports = {
 
 ### *- Another method is add the `devServer` object to our config*
 
-```
+```javascript
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -36,7 +47,5 @@ module.exports = {
 };
 ```
 
-NOTE: There is also Node middleware for the dev server which we'll get to if
-we have time
-
 ### *For now, let's create some VanillaJS components and really make use of HMR*
+(Reference module1.js and index.js for examples)
