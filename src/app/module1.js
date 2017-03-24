@@ -1,11 +1,12 @@
 export const TEST = 'Testing 1..2..3!!!';
 
-export const createH1 = (text, id = '', className = '') => {
+export const createH1 = (text, id = '', className = '', color = '') => {
   const h1 = document.createElement('h1');
 
   h1.id = id;
   h1.classList.add(className);
-  h1.innerHTML = text;
+  h1.innerText = text;
+  h1.style.color = color;
 
   return h1;
 };
